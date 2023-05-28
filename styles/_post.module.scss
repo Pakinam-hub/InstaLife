@@ -1,0 +1,112 @@
+.favoritesContainer {
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  /* Desktop View */
+  .favoritePostsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    .img {
+      width: 100%;
+      max-width: 600px;
+      height: 300px; 
+      margin-bottom: 8px;
+      object-fit: cover;
+    }
+  }
+}
+
+.post {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  border-radius: $post-border-radius;
+  backdrop-filter: blur($post-backdrop-filter-blur);
+  box-shadow: 0px 2px 4px $shadow-color;
+  padding: $post-padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: $post-max-width;
+  width: $post-width;
+  margin-bottom: $post-margin-bottom;
+  align-items: flex-start; 
+  text-align: left; 
+
+  .name {
+    font-size: $name-font-size;
+    font-weight: $name-font-weight;
+  }
+
+  .img {
+    width: 100%;
+    max-width: $img-max-width;
+    max-height: $img-max-height;
+    margin-bottom: $img-margin-bottom;
+    object-fit: cover;
+    border-radius: $img-border-radius;
+  }
+
+  .description,
+  .hashtags {
+    font-size: $description-hashtags-font-size;
+    margin-left: $description-hashtags-margin-left;
+    line-height: $description-line-height;
+  }
+
+  .description {
+    color: $text-color;
+  }
+
+  .hashtags {
+    color: $hashtags-color;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: $info-justify-content;
+    color: $primary-color;
+  }
+
+  .button {
+    border: none;
+    outline: none;
+    font-size: $button-font-size;
+    cursor: $button-cursor;
+    background-color: transparent;
+    color: $button-color;
+  }
+
+  .comments {
+    margin-top: $comments-margin-top;
+    font-size: $comments-color;
+    color: $comments-color;
+    margin-left: $description-hashtags-margin-left;
+
+    .icon {
+      margin-right: $icon-margin-right;
+    }
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    .userIcon {
+      width: $userIcon-width;
+      height: $userIcon-height;
+      border-radius: $userIcon-border-radius;
+      margin-right: $userIcon-margin-right;
+      object-fit: cover;
+    }
+  }
+
+  .favorite {
+    color: $favorite-color;
+    text-shadow: $favorite-text-shadow;
+  }
+}
+
